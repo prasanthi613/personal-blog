@@ -41,27 +41,6 @@ The backend handles routing, data validation, and communication with Supabase us
 
 ---
 
-## 🧾 Supabase Table Schema
-
-```sql
-create extension if not exists "uuid-ossp";
-
-create table posts (
-  id UUID primary key default uuid_generate_v4(),
-  title TEXT not null,
-  content TEXT not null,
-  author TEXT not null,
-  created_at TIMESTAMP default now()
-);
-
-##If RLS is enabled, add
-sql
-
-create policy "Allow public insert"
-on posts for insert using (true);
-
----
-
 ## 🧠 Architectural Overview
 
 This project follows a classic full-stack architecture:
