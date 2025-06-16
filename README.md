@@ -79,15 +79,4 @@ This project is open to collaboration. If you’re a developer interested in ful
 
 ---
 
-## 📃 License
-
-Licensed under the MIT License. You are free to use, modify, and distribute this software with proper attribution.
-
----
-
-
-create policy "Allow public delete"
-on posts for delete using (true);
-
-
 
