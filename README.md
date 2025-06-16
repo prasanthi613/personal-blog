@@ -54,3 +54,14 @@ create table posts (
   created_at TIMESTAMP default now()
 );
 
+##If RLS is enabled, add
+sql
+
+create policy "Allow public insert"
+on posts for insert using (true);
+
+create policy "Allow public delete"
+on posts for delete using (true);
+
+
+
