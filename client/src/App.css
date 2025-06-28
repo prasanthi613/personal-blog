@@ -1,38 +1,88 @@
+/* Core layout */
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Input fields styled with warm background */
+.form-control {
+  background-color: rgba(255, 250, 235, 0.85); /* warm yellow */
+  border: 1px solid #d48c00; /* mustard/orange */
+  color: #333;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.form-control::placeholder {
+  color: #888;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Post button styles */
+.btn-primary {
+  background-color: #d9534f;
+  border-color: #d43f3a;
+}
+
+.btn-primary:hover {
+  background-color: #c9302c;
+  border-color: #ac2925;
+}
+
+/* Scrolling container for cards */
+.scroll-strip {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 1rem;
+  padding: 1rem;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: scroll-cards 20s linear infinite;
+}
+
+@keyframes scroll-cards {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Angled blog cards */
+.angled-card {
+  background-color: #d9534f;
+  color: #4b0000;
+  padding: 1rem;
+  border-radius: 10px;
+  transform: rotate(-3deg);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  flex-shrink: 0;
+  width: 250px;
+  max-width: 250px;
+  text-align: center;
+  border: 2px solid #d67820; /* change this */
+}
+.angled-card:hover {
+  transform: rotate(0deg) scale(1.03);
+  z-index: 2;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.angled-card h5 {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.angled-card p {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.angled-card button {
+  background-color: #800000;
   color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
 }
 
-.App-link {
-  color: #61dafb;
+.angled-card button:hover {
+  background-color: #5a0000;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

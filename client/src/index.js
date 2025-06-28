@@ -3,7 +3,11 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+<<<<<<< HEAD
+import 'bootstrap/dist/css/bootstrap.min.css';
+=======
 
+>>>>>>> f5f777313ccd05ceb1e406c78a49bf97c766089c
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
